@@ -67,7 +67,7 @@ namespace calculate
 
         private void multiplaybtn_Click(object sender, EventArgs e)
         {
-            i *= int.Parse(this.textBox1.Text);
+            i += int.Parse(this.textBox1.Text);
             this.textBox1.Text = "";
             op = 0;
 
@@ -90,7 +90,7 @@ namespace calculate
 
         private void minus_Click(object sender, EventArgs e)
         {
-            i -= int.Parse(this.textBox1.Text);
+            i += int.Parse(this.textBox1.Text);
             this.textBox1.Text = "";
             op = 1;
         }
@@ -130,8 +130,12 @@ namespace calculate
 
         private void equalbtn_Click(object sender, EventArgs e)
         {
-            j += int.Parse(this.textBox1.Text);
-            I += (i + j).ToString();
+            /* if (op == 2)
+             {
+                 I += (i + j).ToString();
+             }
+             j += int.Parse(this.textBox1.Text);
+             I += (i + j).ToString();*/
             /*  if (op == 0)
               {
                   I += (i * j).ToString();
@@ -145,6 +149,24 @@ namespace calculate
                   I += (i + j).ToString();
               }
             */
+            j= int.Parse(this.textBox1.Text);
+            if (op == 0)
+            {
+                I += (i * j).ToString();
+            }
+            else if (op == 1)
+            {
+                I += (i - j).ToString();
+            }
+            else if (op == 2)
+            {
+                I += (i + j).ToString();
+            }
+            else if (op == 3)
+            {
+                I += (i / j).ToString();
+            }
+
             this.label1.Text = I;
             i = 0;
             j=0;
@@ -155,8 +177,19 @@ namespace calculate
 
         private void divise_Click(object sender, EventArgs e)
         {
-            i /= int.Parse(this.textBox1.Text);
+            i += int.Parse(this.textBox1.Text);
             this.textBox1.Text = "";
+            op = 3;
+        }
+
+        private void DEll_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Text = "";
+        }
+
+        private void dell_nmb_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

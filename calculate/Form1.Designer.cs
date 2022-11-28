@@ -45,6 +45,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.divise = new System.Windows.Forms.Button();
+            this.DEll = new System.Windows.Forms.Button();
+            this.dell_nmb = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -215,12 +217,34 @@
             this.divise.UseVisualStyleBackColor = true;
             this.divise.Click += new System.EventHandler(this.divise_Click);
             // 
+            // DEll
+            // 
+            this.DEll.Location = new System.Drawing.Point(15, 265);
+            this.DEll.Name = "DEll";
+            this.DEll.Size = new System.Drawing.Size(71, 65);
+            this.DEll.TabIndex = 19;
+            this.DEll.Text = "DEL";
+            this.DEll.UseVisualStyleBackColor = true;
+            this.DEll.Click += new System.EventHandler(this.DEll_Click);
+            // 
+            // dell_nmb
+            // 
+            this.dell_nmb.Location = new System.Drawing.Point(275, 33);
+            this.dell_nmb.Name = "dell_nmb";
+            this.dell_nmb.Size = new System.Drawing.Size(39, 19);
+            this.dell_nmb.TabIndex = 20;
+            this.dell_nmb.Text = "CE";
+            this.dell_nmb.UseVisualStyleBackColor = true;
+            this.dell_nmb.Click += new System.EventHandler(this.dell_nmb_Click);
+            // 
             // calculate
             // 
             this.AcceptButton = this.equalbtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 334);
+            this.Controls.Add(this.dell_nmb);
+            this.Controls.Add(this.DEll);
             this.Controls.Add(this.divise);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -265,6 +289,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button divise;
+        private System.Windows.Forms.Button DEll;
+        private System.Windows.Forms.Button dell_nmb;
     }
 }
 
